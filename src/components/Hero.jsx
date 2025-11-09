@@ -54,13 +54,13 @@ const Hero = () => {
           <Col lg={6}>
             <Card className="bg-base-100/20 backdrop-blur-sm text-white shadow-2xl border-0">
               <Card.Body className="p-4">
-                <h3 className="card-title text-2xl mb-4">Start Your Journey Today!</h3>
+                <h3 className="card-title text-2xl text-primary mb-4">Start Your Journey Today!</h3>
                 <Form>
                   <Form.Group className="mb-3">
                     <Form.Control 
                       type="text" 
                       placeholder="Full Name" 
-                      className="border-0 py-3"
+                      className="border-2 py-3"
                       style={{ borderRadius: '0.75rem', backgroundColor: 'rgba(255, 255, 255, 0.1)', color: 'white' }}
                     />
                   </Form.Group>
@@ -68,14 +68,14 @@ const Hero = () => {
                     <Form.Control 
                       type="email" 
                       placeholder="Email Address" 
-                      className="border-0 py-3"
+                      className="border-2 py-3"
                       style={{ borderRadius: '0.75rem', backgroundColor: 'rgba(255, 255, 255, 0.1)', color: 'white' }}
                     />
                   </Form.Group>
                   <Form.Group className="mb-4">
                     <Form.Select 
-                      className="border-0 py-3"
-                      style={{ borderRadius: '0.75rem', backgroundColor: 'rgba(255, 255, 255, 0.1)', color: 'white' }}
+                      className="border-2 py-3 dropdown "
+                      style={{ borderRadius: '0.75rem', }}
                     >
                       <option>Choose your course interest</option>
                       <option>Web Development</option>

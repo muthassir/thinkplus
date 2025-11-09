@@ -16,10 +16,10 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/" className="fw-semibold">Home</Nav.Link>
-            <Nav.Link as={Link} to="/courses" className="fw-semibold">Courses</Nav.Link>
-            <Nav.Link href="#features" className="fw-semibold">Features</Nav.Link>
+            <Nav.Link  href="#features" className="fw-semibold">Features</Nav.Link>
+            <Nav.Link  href="#courses" className="fw-semibold">Courses</Nav.Link>
             <Nav.Link href="#testimonials" className="fw-semibold">Success Stories</Nav.Link>
-            <Nav.Link as={Link} to="/contact" className="fw-semibold">Contact</Nav.Link>
+            <Nav.Link href="#contact" className="fw-semibold">Contact</Nav.Link>
           </Nav>
           <div className="d-flex gap-2">
             <Button 

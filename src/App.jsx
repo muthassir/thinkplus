@@ -9,6 +9,7 @@ import Testimonial from './components/Testimonial';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Login from './components/Login';
+import Signup from './components/Signup';
 import Dashboard from './components/Dashboard';
 import './App.css';
 
@@ -29,9 +30,9 @@ function App() {
             </>
           } />
           <Route path="/login" element={<Login />} />
+          <Route path='/signup' element={<Signup/>} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

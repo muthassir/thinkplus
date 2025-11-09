@@ -3,8 +3,9 @@ import { Container, Row, Col, Card, Form, Button, Alert } from 'react-bootstrap'
 import { useNavigate, Link } from 'react-router-dom';
 import {FaGithub, FaFacebook, FaGoogle} from "react-icons/fa"
 
-const Login = () => {
+const Signup = () => {
   const [formData, setFormData] = useState({
+    username: '',
     email: '',
     password: ''
   });
@@ -40,7 +41,7 @@ const Login = () => {
                   <Link to="/">
                     <h2>Thinkplus</h2>
                   </Link>
-                  <p className="text-muted">Sign in to your account</p>
+                  <p className="text-muted">Sign up to your account</p>
                 </div>
 
                 {showAlert && (
@@ -51,6 +52,20 @@ const Login = () => {
                 )}
 
                 <Form onSubmit={handleSubmit}>
+                   <Form.Group className="mb-3">
+                    <Form.Label className="fw-semibold">Username</Form.Label>
+                    <Form.Control
+                      type="text"
+                      name="username"
+                      placeholder="Enter your name"
+                      value={formData.username}
+                      onChange={handleChange}
+                      required
+                      className="border-0 py-3"
+                      style={{ borderRadius: '1rem', backgroundColor: '#f8f9fa' }}
+                    />
+                  </Form.Group>
+
                   <Form.Group className="mb-3">
                     <Form.Label className="fw-semibold">Email Address</Form.Label>
                     <Form.Control
@@ -79,14 +94,6 @@ const Login = () => {
                     />
                   </Form.Group>
 
-                  <div className="d-flex justify-content-between align-items-center mb-4">
-                    <Form.Check 
-                      type="checkbox" 
-                      label="Remember me" 
-                      className="text-muted"
-                    />
-                    <a href="#forgot" className="text-primary text-decoration-none">Forgot password?</a>
-                  </div>
 
                   <Button 
                     type="submit" 
@@ -96,7 +103,7 @@ const Login = () => {
                       background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
                     }}
                   >
-                    Sign In
+                    Sign Up
                   </Button>
                 </Form>
 
@@ -129,9 +136,9 @@ const Login = () => {
 
                 <div className="text-center mt-4">
                   <p className="text-muted">
-                    Don't have an account?{' '}
-                    <Link to="/signup" className="text-primary text-decoration-none fw-semibold">
-                      Sign up
+                    Already have an account?{' '}
+                    <Link to="/login" className="text-primary text-decoration-none fw-semibold">
+                      Sign In
                     </Link>
                   </p>
                 </div>
@@ -144,4 +151,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
